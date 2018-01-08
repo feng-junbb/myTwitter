@@ -1,11 +1,12 @@
 # myTwitter
-###1. List all the users
+##1. List all the users
 curl -X GET \
   http://localhost:8088/api/v0/Users \
   -H 'Authorization: Basic dXNlcjo=' \
   -H 'Cache-Control: no-cache' \
-  -H 'Content-Type: application/json' \
-###2. Create new User: POST: 
+  -H 'Content-Type: application/json' 
+  
+##2. Create new User: POST: 
 curl -X POST \
   http://localhost:8088/api/v0/Users \
   -H 'Authorization: Basic dXNlcjo=' \
@@ -24,7 +25,8 @@ curl -X POST \
     ]
 	
 }'
-###3. follow a user
+
+##3. follow a user
 curl -X POST \
   http://localhost:8088/api/v0/following \
   -H 'Authorization: Basic dXNlcjo=' \
@@ -35,7 +37,8 @@ curl -X POST \
     "user_id": 10001,
     "follower_id": 10002
 }'
-###4. unfollow a user
+
+##4. unfollow a user
 curl -X DELETE \
   http://localhost:8088/api/v0/following \
   -H 'Authorization: Basic dXNlcjo=' \
@@ -46,14 +49,16 @@ curl -X DELETE \
     "user_id": 10002,
     "follower_id": 10001
 }'
-###5. get the list of people the user is following as well as the followers of the user.
+
+##5. get the list of people the user is following as well as the followers of the user.
 curl -X GET \
   http://localhost:8088/api/v0/followings/10001 \
   -H 'Authorization: Basic Og==' \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
-  -H 'Postman-Token: 68440d73-b39d-9096-650a-2ed8bfa110bd' \
-###6. create a new message
+  -H 'Postman-Token: 68440d73-b39d-9096-650a-2ed8bfa110bd' 
+
+##6. create a new message
 curl -X POST \
   http://localhost:8088/api/v0/messages \
   -H 'Authorization: Basic Og==' \
@@ -64,14 +69,16 @@ curl -X POST \
     "user_id": 10003,
     "message": "feng3 published the first message"
 }'
-###7. messages that were sent by user and users he/she follow
+
+##7. messages that were sent by user and users he/she follow
 curl -X GET \
   http://localhost:8088/api/v0/messages/10001 \
   -H 'Authorization: Basic Og==' \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
   -H 'Postman-Token: 70629f7b-fc94-9a35-dc9f-9d288f77cb57'
- ###8. list of user and his/her most popular follower
+  
+ ##8. list of user and his/her most popular follower
  curl -X GET \
   http://localhost:8088/api/v0/users_popular_followers \
   -H 'Authorization: Basic Og==' \
