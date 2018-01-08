@@ -1,12 +1,12 @@
 # myTwitter
-## 1. List all the users
+## 1. list all the users
 curl -X GET \
   http://localhost:8088/api/v0/Users \
   -H 'Authorization: Basic dXNlcjo=' \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' 
   
-## 2. Create new User: POST: 
+## 2. create new user
 curl -X POST \
   http://localhost:8088/api/v0/Users \
   -H 'Authorization: Basic dXNlcjo=' \
